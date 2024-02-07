@@ -1,0 +1,666 @@
+<!-- Headaer -->
+<div class="sticky top-0 p-3 z-30 bg-white">
+  <div class="flex justify-between items-center justify-between">
+    <!-- Right -->
+    <label for="table-search" class="sr-only">Search</label>
+    <div class="relative w-full mr-5">
+        <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input type="text" 
+        id="table-search" 
+        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50" 
+        placeholder="Cari di Tokopedia">
+    </div>
+
+    <!-- Left -->
+    <div class="space-x-5 flex items-center">
+
+      <div class="relative h-6 w-6">
+        <div class="absolute px-1 -right-1.5 -top-0.5 bg-red-500 rounded-full flex items-center text-center">
+          <span style="font-size: 8px;" class="text-white text-center">
+            6
+          </span>
+        </div>
+        <i class="fa-xl fa-regular fa-envelope"></i>
+      </div>
+      <i class="fa-xl fa-regular fa-bell"></i>
+      <div class="relative h-6 w-6">
+        <div class="absolute px-1 -right-1.5 -top-0.5 bg-red-500 rounded-full flex items-center text-center">
+          <span style="font-size: 8px;" class="text-white text-center">
+            17
+          </span>
+        </div>
+        <i class="fa-xl fa-solid fa-cart-shopping"></i>
+      </div>
+      <button (click)="openNav()">
+        <i class="fa-xl fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<!-- Navbar Menu -->
+<div id="myNav" class="transition ease-linear h-full w-0 fixed top-0 left-0 z-40 bg-white text-gray-500 overflow-auto">
+  <!-- Header Navbar Menu -->
+  <div class="p-4">
+    <div class="flex items-center space-x-5">
+      <button (click)="closeNav()">
+        <i class="fa-xl fas fa-times"></i>
+      </button>
+      <span class="font-semibold text-lg text-gray-700">Menu Utama</span>
+    </div>
+
+    <div class="mt-3"></div>
+    <div class="flex items-center w-full h-20">
+      <div class="w-1/5 flex items-center">
+        <div class="avatar">
+          <div class="w-4/5 rounded-full">
+            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="w-3/5 space-y-0.5">
+        <div class="flex items-center space-x-1">
+          <div class="w-4 h-4 bg-yellow-500 flex justify-center items-center rounded-full">
+            <i class="fas fa-star fa-2xs text-white"></i>
+          </div>
+          <div class="text-xs text-gray-700 font-bold">
+            Happid Ridwan Ilmi
+          </div>
+        </div>
+        <div class="flex items-center space-x-1">
+          <div class="w-4 h-4 bg-blue-400 flex justify-center items-center rounded-full">
+            <i class="fas fa-wallet fa-2xs text-white"></i>
+          </div>
+          <div class="flex items-center text-xs text-gray-500 font-bold font-light">
+            Rp67.000 
+            <b class="mx-1 font-semibold font-normal text-gray-700 text-lg">.</b> 
+            65.308 Coins
+          </div>
+        </div>
+        <div class="flex items-center space-x-1">
+          <div class="w-4 h-4 flex justify-center items-center rounded-full">
+            <i class="far fa-money-bill-alt text-green-400"></i>
+          </div>
+          <div class="flex items-center text-xs text-gray-500 font-bold font-light">
+            Saldo Rp7.000 
+          </div>
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end">
+        <i class="fas fa-cog fa-lg"></i>
+      </div>
+    </div>
+
+    <div class="mt-3"></div>
+    <div class="px-2 py-3 w-full flex items-center border rounded">
+      <div class="w-4/5 text-xs ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="text-green-600 font-bold text-lg">PLUS</i>
+        <div class="font-semibold leading-3">
+          Nikmati Bebas Ongkir Tanpa Batas !
+          <span class="font-light text-gray-500" style="font-size: 9px;">Dikirim cepat & dapat GoFood PLUS juga</span>
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+    <div class="mt-3"></div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="col-span-1">
+        <div class="px-2 py-3 w-full flex items-center border rounded">
+          <div class="w-4/5 text-xs ml-2 text-gray-700 flex items-center space-x-3">
+            <div class="font-semibold leading-3">
+              Buka Toko Gratis
+            </div>
+          </div>
+          <div class="w-1/5 flex justify-end px-2">
+            <i class="fas fa-chevron-right fa-sm"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-1">
+        <div class="px-2 py-3 w-full flex items-center border rounded">
+          <div class="w-4/5 text-xs ml-2 text-gray-700 flex items-center space-x-3">
+            <div class="font-semibold leading-3">
+              Daftar Affiliate
+            </div>
+          </div>
+          <div class="w-1/5 flex justify-end px-2">
+            <i class="fas fa-chevron-right fa-sm"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-2 w-full bg-gray-100"></div>
+
+  <!-- Section Navbar Menu -->
+  <div class="p-4">
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg far fa-list-alt"></i>
+        <div>
+          Daftar Transaksi
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+    <div class="mt-3"></div>
+    <div class="w-full carousel space-x-3">
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold leading-2 text-orange-400">
+            Tiba di Tujuan<br/>
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+          </div>
+        </div>
+      </div> 
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold leading-2 text-orange-400">
+            Tiba di Tujuan<br/>
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+          </div>
+        </div>
+      </div> 
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold leading-2 text-orange-400">
+            Tiba di Tujuan<br/>
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="mt-5"></div>
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg far fa-star"></i>
+        <div>
+          Ulasan
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+    <div class="mt-3"></div>
+    <div class="w-full carousel space-x-3">
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold">
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+            <div class="flex w-full space-x-3 mt-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold">
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+            <div class="flex w-full space-x-3 mt-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="carousel-item w-4/5">
+        <div class="px-2 py-3 w-full flex border rounded-box">
+          <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-20 rounded" alt="Tailwind CSS Carousel component" />
+          <div class="text-xs ml-2 font-semibold">
+            <span class="font-light text-gray-500 uppercase">Hardcase casing mika...</span>
+            <div class="flex w-full space-x-3 mt-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="mt-5"></div>
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg far fa-heart"></i>
+        <div>
+          Wishlist
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+    <div class="mt-5"></div>
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg fas fa-store-alt"></i>
+        <div>
+          Toko yang Di-follow
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="h-2 w-full bg-gray-100"></div>
+
+  <!-- Footer Navbar Menu -->
+  <div class="p-4">
+
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg fas fa-user-clock"></i>
+        <div>
+          Pesanan Dikomplain
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+    <div class="mt-5"></div>
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg fas fa-user-astronaut"></i>
+        <div>
+          Bantuan Tokopedia Care
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+    <div class="mt-5"></div>
+    <div class="w-full flex items-center">
+      <div class="w-4/5 text-sm ml-2 text-gray-700 flex items-center space-x-3">
+        <i class="fa-lg fas fa-qrcode"></i>
+        <div>
+          Scan Kode QR
+        </div>
+      </div>
+      <div class="w-1/5 flex justify-end px-2">
+        <i class="fas fa-chevron-right fa-sm"></i>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Content -->
+<div class="px-3">
+  <!-- Alamat -->
+  <div class="flex justify-end items-center">
+    <i class="fas fa-map-marker-alt fa-xs text-green-600"></i>
+    <div class="text-xs ml-2 text-gray-500">Dikirim Ke
+      <span class="font-semibold">Lorem Ipsum is simply dummy text of the print...</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <div class="mt-3"></div>
+  <div class="grid grid-cols-3 gap-2">
+
+    <!-- Gopay -->
+    <div class="flex items-center space-x-1 p-1 border-r">
+      <div class="w-5 h-5 bg-blue-500 flex justify-center items-center rounded-full">
+        <i class="fas fa-wallet fa-xs text-white"></i>
+      </div>
+      <div class="text-xs text-gray-700 font-bold">
+        Rp.67.000<br>
+        <span class="text-xs text-gray-500 font-light font-normal">659 coints</span>
+      </div>
+    </div>
+    
+    <!-- Langganan -->
+    <div class="flex items-center space-x-1 p-1 border-r">
+      <div class="w-5 h-5 bg-green-500 flex justify-center items-center rounded-full">
+        <i class="fas fa-shipping-fast fa-xs text-white"></i>
+      </div>
+      <div class="text-xs text-gray-700 font-bold">
+        Coba 1 Bulan<br>
+        <span class="text-xs text-green-700 font-light font-normal">
+          Langanan Yuk
+        </span>
+      </div>
+    </div>
+
+    <!-- Emas -->
+    <div class="flex items-center space-x-1 p-1">
+      <div class="w-5 h-5 bg-yellow-500 flex justify-center items-center rounded-full">
+        <i class="fas fa-star fa-xs text-white"></i>
+      </div>
+      <div class="text-xs text-gray-700 font-bold">
+        Gold<br>
+        <span class="text-xs text-gray-500 font-light font-normal">19 Kupon Baru</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="mt-3"></div>
+  <div class="relative">
+    <div class="w-full carousel carousel-center rounded-box">
+      <div id="item1" class="carousel-item w-1/2 sm:w-1/3">
+        <img class="w-full" src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Pizza" />
+      </div> 
+      <div id="item2" class="carousel-item w-1/2 sm:w-1/3">
+        <img class="w-full"  src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Pizza" />
+      </div> 
+      <div id="item3" class="carousel-item w-1/2 sm:w-1/3">
+        <img class="w-full"  src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Pizza" />
+      </div> 
+      <div id="item4" class="carousel-item w-1/2 sm:w-1/3">
+        <img class="w-full"  src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Pizza" />
+      </div> 
+    </div> 
+    <div class="absolute bottom-3 flex justify-center w-full py-2 gap-2">
+      <a href="#item1" class="h-2 w-2 rounded-full bg-gray-100"></a> 
+      <a href="#item4" class="h-2 w-10 rounded-full bg-gray-100"></a> 
+    </div>
+  </div>
+
+  <!-- Section Icon -->
+  <div class="mt-3"></div>
+  <div class="grid grid-cols-6 gap-4 text-gray-500">
+    <div id="icon1" class="w-full text-center">
+      <div class="bg-red-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-staylinked fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Mumpung Murah</div>
+    </div>
+    <div id="icon2" class="w-full text-center">
+      <div class="bg-yellow-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-kickstarter fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Beli Lokal</div>
+    </div>
+    <div id="icon3" class="w-full text-center">
+      <div class="bg-orange-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-galactic-senate fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Top-up & Tagihan</div>
+    </div>
+    <div id="icon4" class="w-full text-center">
+      <div class="bg-green-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fas fa-meteor fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Diskon</div>
+    </div>
+    <div id="icon5" class="w-full text-center">
+      <div class="bg-blue-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-cc-paypal fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Tokopedia Card</div>
+    </div>
+    <div id="icon6" class="w-full text-center">
+      <div class="bg-purple-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="far fa-money-bill-alt fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Kirim Ampao</div>
+    </div>
+
+    <div id="icon7" class="w-full text-center">
+      <div class="bg-orange-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fas fa-ticket-alt fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Tiket & Hiburan</div>
+    </div>
+    <div id="icon8" class="w-full text-center">
+      <div class="bg-purple-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fas fa-dumpster-fire fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Tokopedia Now</div>
+    </div>
+    <div id="icon9" class="w-full text-center">
+      <div class="bg-red-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fas fa-tshirt fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Fashion</div>
+    </div>
+    <div id="icon10" class="w-full text-center">
+      <div class="bg-blue-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-staylinked fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Lihat Semua</div>
+    </div>
+    <div id="icon11" class="w-full text-center">
+      <div class="bg-yellow-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fas fa-utensils fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">GoFood</div>
+    </div>
+    <div id="icon12" class="w-full text-center">
+      <div class="bg-green-200 w-full h-12 rounded flex justify-center items-center">
+        <i class="fab fa-gratipay fa-xl"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Tips</div>
+    </div>
+
+  </div>
+
+  <!-- Section Feature -->
+  <h5 class="mt-8 font-semibold text-gray-700">Lanjut cek ini, yuk !</h5>
+  <div class="mt-3"></div>
+  <div class="relative w-full space-x-4 carousel text-gray-500 text-xs">
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Balik lihat</div>
+      </div>
+    </div> 
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Lanjut Browse</div>
+      </div>
+    </div> 
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Cek lagi yuk</div>
+      </div>
+    </div> 
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/4465126/pexels-photo-4465126.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Lanjut cari</div>
+      </div>
+    </div> 
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/4210339/pexels-photo-4210339.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Kejar promo</div>
+      </div>
+    </div> 
+    <div class="carousel-item w-1/5">
+      <div class="w-full">
+        <img src="https://images.pexels.com/photos/2608495/pexels-photo-2608495.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full rounded" alt="Tailwind CSS Carousel component" />
+        <div class="">Lanjut whislist</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5"></div>
+  <div class="flex w-full h-10 items-center">
+    <div class="w-11/12">
+      <div class="font-semibold text-gray-700">Kejar Diskon Promo Hoki</div>
+      <div class="flex items-center text-gray-500 text-xs">
+        Berakhir dalam
+        <div class="badge bg-red-600 text-white py-1 ml-2">
+          <i class="far fa-clock fa-sm mr-1"></i>
+          <span class="font-semibold text-xs">03:11:47</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-1/12 flex justify-end">
+      <div class="flex justify-center items-center border border-gray-300 rounded-full w-7 h-7">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mt-3"></div>
+<div class="flex w-full items-center bg-red-200 p-4">
+  <div class="w-2/6">
+    <div class="text-xl font-extrabold text-green-600 uppercase leading-5 mb-2">
+      Kejar <br/>
+      <span class="text-green-900">Diskon</span> <br/>
+      Special
+    </div>
+    <label class="font-bold">Mulai</label> dari 
+    <div class="flex items-center font-bold">
+      Rp
+      <span class="text-5xl font-extrabold">8</span>
+      rb
+    </div>
+    <button class="btn btn-xs rounded-box text-xs text-gray-500 mt-2">Cek Promo</button>
+  </div>
+
+  <!-- carousel kejar diskon -->
+  <div class="w-4/6 bg-blue-200 ">
+    <div class="w-full bg-red-200 carousel space-x-3">
+      
+      <div class="carousel-item w-3/6">
+        <div class="py-1 px-2 w-full bg-white flex flex-col border rounded-box">
+          <div class="w-full flex flex-col items-center">
+            <img src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=800" 
+            class="w-2/3 rounded" alt="Tailwind CSS Carousel component" />
+            <div class="leading-4 text-sm my-2 font-semibold text-gray-700">
+              Rp69.000<br/>
+              <div class="">
+                <span class="text-xs font-light text-gray-500 uppercase line-through"> 
+                  Rp130.000
+                </span> 
+                <label class="text-xs font-semibold text-red-500">50%</label>
+              </div>
+            </div>
+          </div>
+          
+          <progress class="progress progress-error w-full" value="70" max="100"></progress>
+          <label class="text-xs text-gray-500">Tersedia</label>
+        </div>
+      </div> 
+
+      <div class="carousel-item w-3/6">
+        <div class="py-1 px-2 w-full bg-white flex flex-col border rounded-box">
+          <div class="w-full flex flex-col items-center">
+            <img src="https://images.pexels.com/photos/4465126/pexels-photo-4465126.jpeg?auto=compress&cs=tinysrgb&w=800" 
+            class="w-2/3 rounded" alt="Tailwind CSS Carousel component" />
+            <div class="leading-4 text-sm my-2 font-semibold text-gray-700">
+              Rp70.000<br/>
+              <div class="">
+                <span class="text-xs font-light text-gray-500 uppercase line-through"> 
+                  Rp990.000
+                </span> 
+                <label class="text-xs font-semibold text-red-500">50%</label>
+              </div>
+            </div>
+          </div>
+          
+          <progress class="progress progress-error w-full" value="40" max="100"></progress>
+          <label class="text-xs text-gray-500">Tersedia</label>
+        </div>
+      </div> 
+
+      <div class="carousel-item w-3/6">
+        <div class="py-1 px-2 w-full bg-white flex flex-col border rounded-box">
+          <div class="w-full flex flex-col items-center">
+            <img src="https://images.pexels.com/photos/4465126/pexels-photo-4465126.jpeg?auto=compress&cs=tinysrgb&w=800" 
+            class="w-2/3 rounded" alt="Tailwind CSS Carousel component" />
+            <div class="leading-4 text-sm my-2 font-semibold text-gray-700">
+              Rp70.000<br/>
+              <div class="">
+                <span class="text-xs font-light text-gray-500 uppercase line-through"> 
+                  Rp990.000
+                </span> 
+                <label class="text-xs font-semibold text-red-500">50%</label>
+              </div>
+            </div>
+          </div>
+          
+          <progress class="progress progress-error w-full" value="40" max="100"></progress>
+          <label class="text-xs text-gray-500">Tersedia</label>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+  
+</div>
+
+<!-- Footer -->
+<div class="mt-5 sticky bottom-0 px-2 py-3 z-30 bg-gray-50 border-t">
+
+  <div class="grid grid-cols-5 gap-4 text-gray-600">
+    <div class="w-full text-center text-green-600">
+      <div>
+        <i class="fa-lg fas fa-house-user"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Home</div>
+    </div>
+    <div class="w-full text-center">
+      <div>
+        <i class="fa-lg far fa-play-circle"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Feed</div>
+    </div>
+    <div class="w-full text-center">
+      <div>
+        <i class="fa-lg far fa-check-circle"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Official Store</div>
+    </div>
+    <div class="w-full text-center">
+      <div>
+        <i class="fa-lg far fa-heart"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Wishlist</div>
+    </div>
+    <div class="w-full text-center">
+      <div>
+        <i class="fa-lg far fa-list-alt"></i>
+      </div>
+      <div class="leading-3" style="font-size: 9px;">Transaksi</div>
+    </div>
+  </div>
+
+</div>
+
+
+<router-outlet />
