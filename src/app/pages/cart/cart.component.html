@@ -1,0 +1,134 @@
+<!-- Headaer Product-->
+<div class="sticky top-0 p-3 z-30 bg-white">
+  <div class="flex justify-between items-center justify-between">
+    <!-- Right -->
+    <button (click)="goBackPage()">
+      <i class="fa-lg fa-solid fa-arrow-left-long"></i>
+    </button>
+
+    <!-- Left -->
+    <div class="space-x-5 flex items-center">
+      <i class="fa-lg fa-solid fa-magnifying-glass"></i>
+      <i class="fa-lg fa-solid fa-square-share-nodes"></i>
+
+      <div routerLink="/cart" class="relative h-6 w-6">
+        <div class="absolute px-1 -right-1.5 -top-0.5 bg-red-500 rounded-full flex items-center text-center">
+          <span style="font-size: 8px;" class="text-white text-center">
+            {{lengthNotif}}
+          </span>
+        </div>
+        <i class="fa-lg fa-solid fa-cart-shopping"></i>
+      </div>
+      <button (click)="openNav()">
+        <i class="fa-lg fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="listCart">
+  <div class="border-t"></div>
+  <ng-container *ngFor="let cart of listCart; let i=index">
+    <div class="p-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <input type="checkbox" class="w-4 h-4 accent-green-600 bg-gray-100 border-green-300 rounded focus:ring-green-500">
+          <div class="flex items-center">
+            <div>
+              <ng-container *ngIf="cart.storeStatus==1">
+                <i class="fa-sm fa-solid fa-check-to-slot text-purple-800"></i>
+              </ng-container>
+              <ng-container *ngIf="cart.storeStatus!=1">
+                <i class="fa-sm fa-solid fa-crown text-green-600"></i>
+              </ng-container>
+            </div>
+            <b for="green-checkbox" class="ms-1 text-xs text-gray-900">
+              {{cart.storeName}}
+            </b>
+          </div>
+        </div>
+        <div class="flex">
+          <i class="text-green-600 uppercase font-extrabold" style="line-height: 8px; font-size: 8px;">
+            Bebas <br/>Ongkir
+          </i>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 mt-5" *ngFor="let subcart of cart.productList; let j=index">
+        <input type="checkbox" class="w-4 h-4 accent-green-600 bg-gray-100 border-green-300 rounded focus:ring-green-500">
+        <div class="flex w-full">
+          <div class="w-14 mr-2">
+            <img [src]="subcart.imageUrl" alt="cart1">
+          </div>
+          <div class="flex flex-col w-full ms-1 text-xs text-gray-400 font-normal leading-4">
+            <div>
+              <label>{{subcart.productName}}</label><br/>
+              <b class="text-gray-700">
+                {{ subcart.disconPrice * subcart.order | currency: 'Rp' : 'symbol' : '4.0'}}
+              </b>
+              <span class="line-through ml-1">
+                {{ subcart.price * subcart.order | currency: 'Rp' : 'symbol' : '4.0'}}
+              </span><br/>
+              <label>{{ subcart.quantity }}</label>
+            </div>
+            <div class="mt-2 flex justify-between items-center w-full">
+              <div class="space-x-5">
+                <i class="fa-lg fa-regular fa-rectangle-list"></i>
+                <i class="fa-lg fa-regular fa-heart"></i>
+              </div>
+              <div class="flex justify-end space-x-5 items-center text-gray-700 border-2 rounded-md py-1.5 px-2">
+                <button (click)="minusOrder(i)">
+                  <i class="fa-lg fa-solid fa-minus"></i>
+                </button>
+                <span>{{ subcart.order }}</span>
+                 <button (click)="plusOrder(i)">
+                  <i class="fa-lg fa-solid fa-plus"></i>
+                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-2 w-full bg-gray-100"></div>
+  </ng-container>
+</ng-container>
+
+
+<ng-container>
+
+  <div class="mt-5 sticky bottom-0 z-30 bg-gray-50">
+     <div class="flex justify-between items-center bg-green-100 px-3 py-1.5 border-t-2 border-b-2 border-green-400 rounded-t-xl">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-coins text-yellow-400"></i>
+          <b class="text-xs">Yuk, pakai 2 promo biar hemat Rp6.670!</b>
+        </div>
+        <div class="flex justify-end">
+          <i class="fa-xs fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center px-3 py-3">
+        <div class="flex items-start space-x-2">
+          <div class="flex items-center h-5">
+            <input id="semua" type="checkbox" value="" class="w-4 h-4 accent-green-600 bg-gray-100 border-green-300 rounded focus:ring-green-500" required>
+          </div>
+          <label for="semua" class="text-xs text-gray-700">
+            Semua
+          </label>
+        </div>
+        <div class="flex space-x-4">
+          <div class="text-xs">
+            <label class="flex justify-end">Total</label>
+            <b>{{total | currency: 'Rp' : 'symbol' : '4.0'}}</b>
+          </div>
+          <button 
+          routerLink="/konfirmasi-pengiriman"
+          class="bg-green-600 rounded-xl px-8 py-1.5 w-full h-full border border-green-600 text-white font-bold text-sm">
+            Beli
+          </button>
+        </div>
+      </div>
+
+  </div>
+</ng-container>

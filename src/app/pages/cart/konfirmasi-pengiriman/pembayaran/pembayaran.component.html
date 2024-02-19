@@ -1,0 +1,151 @@
+<div class="w-full h-1 border-t"></div>
+<div class="px-3">
+  <div class="flex w-full items-center border-b py-2">
+    <div class="w-9/12 flex items-center space-x-2">
+      <div class="w-10 h-10 bg-cyan-500 flex justify-center items-center rounded-full">
+        <i class="fa-xl fas fa-wallet fa-xs text-white"></i>
+      </div>
+      <div class="leading-5 text-xs text-gray-400">
+        <b class="text-gray-700">GoPay (Rp67.000)</b><br/>
+        <label>Oops, saldo kurang. </label>
+        <b class="text-green-600">Top Up Sekarang</b>
+      </div>
+    </div>
+    <div class="w-3/12 flex justify-end">
+      <input type="checkbox" class="toggle toggle-success" checked />
+    </div>
+  </div>
+
+  <div class="flex w-full items-center border-b py-2">
+    <div class="w-9/12 flex items-center space-x-2">
+      <div class="w-10 h-10 flex items-center">
+        <i class="fa-2xl fa-solid fa-coins text-cyan-500"></i>
+      </div>
+      <div class="leading-5 text-xs text-gray-400">
+        <b class="text-gray-700">GoPay Coins</b><br/>
+        <label class="">75.989 Coins icon</label>
+      </div>
+    </div>
+    <div class="w-3/12 flex justify-end">
+      <input type="checkbox" class="toggle toggle-success" checked />
+    </div>
+  </div>
+</div>
+
+<div class="h-2 w-full bg-gray-100"></div>
+<div class="p-3">
+  <div class="w-full flex justify-between items-center">
+    <b class="text-gray-700 flex items-center space-x-3">
+      Metode Pembayaran
+    </b>
+    <b class="text-xs text-green-500">Lihat Semua</b>
+  </div>
+
+  <div class="text-sm mt-3 w-full flex justify-between items-center border-b py-4">
+    <div class="flex items-center space-x-2">
+      <i class="font-extrabold text-blue-700">
+        BCA
+      </i>
+      <b class="text-sm text-gray-700 flex items-center space-x-3">
+        BCA Virtual Account
+      </b>
+    </div>
+    <input type="radio" name="radio-5" class="radio radio-sm radio-success" checked />
+  </div>
+
+  <div class="text-sm mt-3 w-full flex justify-between items-center py-4">
+    <div class="flex items-center space-x-2">
+      <i class="fa-xl fa-regular fa-handshake text-yellow-500"></i>
+      <b class="text-sm text-gray-700 flex items-center space-x-3">
+        COD (Bayar di tempat)
+      </b>
+    </div>
+    <input type="radio" name="radio-5" class="radio radio-sm radio-success" />
+  </div>
+</div>
+
+
+<div class="h-2 w-full bg-gray-100"></div>
+<div class="p-3">
+  <b class="text-gray-700 flex items-center space-x-3">
+    Promo Pembayaran
+  </b>
+
+  <div class="mt-3 bg-white border shadow py-2 rounded-lg">
+    <div class="border-l-4 border-cyan-300 px-2 flex items-center">
+      <div class="mr-2 w-5 h-5 bg-cyan-500 flex justify-center items-center rounded-full">
+        <i class="fa-2xs fas fa-wallet fa-xs text-white"></i>
+      </div>
+      <b class="text-xs">Gopay</b>
+    </div>
+    <div class="px-2 text-xs text-gray-400 mt-1">
+      + cashback 3.519 GoPay Coins (khusus bayar penuh pakai GoPay)
+    </div>
+  </div>
+</div>
+
+<div class="h-2 w-full bg-gray-100"></div>
+<div class="p-3">
+  <b class="text-gray-700 flex items-center space-x-3">
+    Ringkasan Pembayaran
+  </b>
+  <div class="flex justify-between text-xs mt-2">
+    <div>Total Belanja</div>
+    <div class="text-green-600 font-semibold">
+      <label class="line-through text-gray-400">Rp366.950</label> 
+      Rp352.950
+    </div>
+  </div>
+  
+  <div class="flex justify-between text-xs mt-2">
+    <div>
+      Biaya Layanan
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+    <div class="font-semibold">
+      Rp1.000
+    </div>
+  </div>
+
+  <div class="flex justify-between text-xs mt-2">
+    <div>Pakai GoPay</div>
+    <div class="font-semibold">
+      -Rp67.100
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<ng-container>
+
+  <div class="mt-5 sticky bottom-0 z-30 bg-gray-50">
+     <div class="flex justify-between items-center bg-green-100 px-3 py-1.5 border-t-2 border-b-2 border-green-400">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-gift text-yellow-400"></i>
+          <div class="text-xs">
+            Yay, Kamu dapat diskon
+            <span class="text-green-600 font-bold">Rp14.000</span>
+            dari transaksi ini
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center px-3 py-3">
+        <div class="flex items-start space-x-2">
+          <div class="text-xs">
+            <b class="flex justify-start">Total Tagihan</b>
+            <b class="text-lg">Rp999.999</b>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <button 
+          routerLink="/konfirmasi-pengiriman"
+          class="bg-green-600 rounded-lg px-10 py-1.5 w-full h-full border border-green-600 text-white font-bold text-sm">
+            <i class="fa-regular fa-circle-check"></i>
+            Bayar
+          </button>
+        </div>
+      </div>
+
+  </div>
+</ng-container>

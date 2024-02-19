@@ -1,0 +1,92 @@
+{
+  "cart": [
+    {
+      "id": "1",
+      "storeName": "MakeUp Official",
+      "storeStatus": 1,
+      "productList": [
+        {
+          "id": "1",
+          "storeName": "MakeUp Official",
+          "storeStatus": 1,
+          "productName": "Lip tint warna pink",
+          "price": 349000,
+          "quantity": 55,
+          "order": 1,
+          "discon": 10,
+          "disconPrice": 314100,
+          "wishlist": true,
+          "imageUrl": "https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "storeName": "Aneka Store",
+      "storeStatus": 0,
+      "productList": [
+        {
+          "id": "2",
+          "storeName": "Aneka Store",
+          "storeStatus": 0,
+          "productName": "A coca cola less sugar",
+          "price": 500000,
+          "quantity": 30,
+          "order": 1,
+          "discon": 20,
+          "disconPrice": 400000,
+          "wishlist": true,
+          "imageUrl": "https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=800"
+        },
+        {
+          "id": "4",
+          "storeName": "Aneka Store",
+          "storeStatus": 0,
+          "productName": "Jam Tangan Pria Stainlest",
+          "price": 150000,
+          "quantity": 20,
+          "order": 1,
+          "discon": 50,
+          "disconPrice": 75000,
+          "wishlist": true,
+          "imageUrl": "https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "storeName": "Elektronik Official",
+      "storeStatus": 1,
+      "productList": [
+        {
+          "id": "3",
+          "storeName": "Serba Ada Jaya",
+          "storeStatus": 2,
+          "productName": "Apple Product Lorem Ipsum is simply dummy text of the print - simply text",
+          "price": 11500999,
+          "quantity": 5,
+          "order": 3,
+          "discon": 10,
+          "disconPrice": 10350899,
+          "wishlist": true,
+          "imageUrl": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ]
+    }
+  ],
+  "product": [
+    {
+      "id": "3",
+      "storeName": "Serba Ada Jaya",
+      "storeStatus": 2,
+      "productName": "Apple Product Lorem Ipsum is simply dummy text of the print - simply text",
+      "price": 11500999,
+      "quantity": 5,
+      "order": 1,
+      "discon": 10,
+      "disconPrice": 10350899,
+      "wishlist": true,
+      "imageUrl": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+    }
+  ]
+}
